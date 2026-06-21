@@ -1,0 +1,43 @@
+{
+  "signals": [
+    {
+      "id": "sig-001",
+      "name": "API Gateway",
+      "status": "ok",
+      "description": "Primary API gateway health"
+    },
+    {
+      "id": "sig-002",
+      "name": "Auth Service",
+      "status": "warn",
+      "description": "Authentication latency elevated"
+    },
+    {
+      "id": "sig-003",
+      "name": "Database Replica",
+      "status": "down",
+      "description": "Replica sync lag critical"
+    }
+  ],
+  "activities": [
+    {
+      "id": "evt-001",
+      "message": "API Gateway status OK",
+      "timestamp": "2026-06-21T04:00:00Z"
+    },
+    {
+      "id": "evt-002",
+      "message": "Auth Service warning triggered",
+      "timestamp": "2026-06-21T04:05:00Z"
+    },
+    {
+      "id": "evt-003",
+      "message": "Database Replica down",
+      "timestamp": "2026-06-21T04:10:00Z"
+    }
+  ],
+  "preferences": {
+    "theme": "light",
+    "refreshInterval": 30
+  }
+}
