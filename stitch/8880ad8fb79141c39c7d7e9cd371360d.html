@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insights - Signal Desk Canary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#dec29a",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "tertiary-container": "#271901",
+                        "surface-variant": "#e0e3e5",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#45464d",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary-container": "#98805d",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#54647a",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-tint": "#565e74",
+                        "on-surface": "#191c1e",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed": "#271901",
+                        "secondary": "#505f76",
+                        "inverse-primary": "#bec6e0",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-container-low": "#f2f4f6",
+                        "primary-fixed-dim": "#bec6e0",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary": "#000000",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-bright": "#f7f9fb",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2d3133",
+                        "on-error": "#ffffff",
+                        "primary-container": "#131b2e",
+                        "on-background": "#191c1e",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "surface-container": "#eceef0",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#000000",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-container": "#7c839b",
+                        "tertiary-fixed": "#fcdeb5",
+                        "on-primary": "#ffffff",
+                        "outline": "#76777d",
+                        "background": "#f7f9fb",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary-fixed": "#0b1c30",
+                        "surface": "#f7f9fb",
+                        "secondary-container": "#d0e1fb",
+                        "on-tertiary-fixed-variant": "#574425",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "component-gap": "8px",
+                        "stack-md": "12px",
+                        "unit": "4px",
+                        "stack-sm": "4px",
+                        "container-padding": "24px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f7f9fb; color: #191c1e; }
+        .tabular-nums { font-variant-numeric: tabular-nums; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col md:flex-row">
+<!-- Mobile TopNav (Visible only on mobile) -->
+<header class="md:hidden flex justify-between items-center w-full px-container-padding h-10 bg-surface border-b border-outline-variant z-50 sticky top-0">
+<div class="font-headline-lg-mobile text-headline-lg-mobile font-black text-primary">Signal Desk Canary</div>
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:bg-surface-container-high transition-colors p-1 rounded"><span class="material-symbols-outlined">refresh</span></button>
+<button class="text-secondary hover:bg-surface-container-high transition-colors p-1 rounded"><span class="material-symbols-outlined">download</span></button>
+</div>
+</header>
+<!-- SideNav (Desktop) -->
+<aside class="hidden md:flex flex-col fixed left-0 top-0 h-full z-40 bg-surface-container-low border-r border-outline-variant docked left-0 h-full w-60">
+<div class="p-container-padding border-b border-outline-variant flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary text-on-primary flex items-center justify-center font-bold">SD</div>
+<div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface">Signal Desk</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">V2.4.1 Canary</div>
+</div>
+</div>
+<nav class="flex-1 py-4 flex flex-col gap-1 px-3">
+<a class="text-on-surface-variant px-3 py-2 flex items-center gap-2 hover:bg-surface-variant transition-all font-label-md text-label-md rounded" href="#">
+<span class="material-symbols-outlined text-[18px]">dashboard</span> Dashboard
+            </a>
+<a class="text-on-surface-variant px-3 py-2 flex items-center gap-2 hover:bg-surface-variant transition-all font-label-md text-label-md rounded" href="#">
+<span class="material-symbols-outlined text-[18px]">dns</span> Services
+            </a>
+<a class="text-on-surface-variant px-3 py-2 flex items-center gap-2 hover:bg-surface-variant transition-all font-label-md text-label-md rounded" href="#">
+<span class="material-symbols-outlined text-[18px]">notification_important</span> Alerts
+            </a>
+<!-- Semantic Mapping: Since page intent is 'Insights', and there's no direct match in SideNav, we highlight the most logical section if applicable, or leave active state to TopNav. Based on SideNav JSON, "Logs" is closest to insights/trends, but TopNav has exact "Insights". Let's assume TopNav controls primary section view, but SideNav is global. We will leave SideNav inactive to avoid conflict, focusing active state on TopNav. -->
+<a class="text-on-surface-variant px-3 py-2 flex items-center gap-2 hover:bg-surface-variant transition-all font-label-md text-label-md rounded" href="#">
+<span class="material-symbols-outlined text-[18px]">settings</span> Settings
+            </a>
+<a class="text-on-surface-variant px-3 py-2 flex items-center gap-2 hover:bg-surface-variant transition-all font-label-md text-label-md rounded" href="#">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span> Logs
+            </a>
+</nav>
+<div class="p-4 border-t border-outline-variant flex flex-col gap-2">
+<button class="w-full py-2 bg-surface-variant text-on-surface-variant font-label-md text-label-md rounded hover:bg-outline-variant transition-colors border border-outline-variant text-left px-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span> Reset App State
+            </button>
+<a class="text-on-surface-variant px-3 py-2 flex items-center gap-2 hover:bg-surface-variant transition-all font-label-md text-label-md rounded" href="#">
+<span class="material-symbols-outlined text-[18px]">export_notes</span> Export Data
+            </a>
+<a class="text-on-surface-variant px-3 py-2 flex items-center gap-2 hover:bg-surface-variant transition-all font-label-md text-label-md rounded" href="#">
+<span class="material-symbols-outlined text-[18px]">help_outline</span> Help
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-60 flex flex-col min-h-screen">
+<!-- Desktop TopNav (Tabs) -->
+<header class="hidden md:flex justify-between items-center w-full px-container-padding h-10 bg-surface border-b border-outline-variant docked full-width top-0 sticky">
+<nav class="flex h-full gap-6">
+<a class="text-secondary font-headline-md text-headline-md flex items-center h-full hover:bg-surface-container-high transition-colors px-2" href="#">Operations</a>
+<a class="text-secondary font-headline-md text-headline-md flex items-center h-full hover:bg-surface-container-high transition-colors px-2" href="#">Editor</a>
+<!-- Active State Logic applied to Insights -->
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-headline-md text-headline-md flex items-center h-full opacity-80 duration-100 px-2" href="#">Insights</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:bg-surface-container-high transition-colors p-1 rounded"><span class="material-symbols-outlined">refresh</span></button>
+<button class="text-secondary hover:bg-surface-container-high transition-colors p-1 rounded"><span class="material-symbols-outlined">download</span></button>
+</div>
+</header>
+<!-- Page Canvas -->
+<div class="p-container-padding flex-1 flex flex-col gap-6 max-w-7xl mx-auto w-full">
+<!-- Page Header & Actions -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary">System Insights</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#f59e0b]"></span>
+                        3 Warning states need attention. Review recent activity logs.
+                    </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-2 px-3 py-1.5 bg-surface text-on-surface border border-outline-variant rounded hover:bg-surface-variant transition-colors font-label-sm text-label-sm h-8" onclick="console.log('ACT_FILTER_INSIGHTS')">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> Filter
+                    </button>
+<button class="flex items-center gap-2 px-3 py-1.5 bg-primary text-on-primary rounded hover:opacity-90 transition-opacity font-label-sm text-label-sm h-8" onclick="console.log('ACT_EXPORT_SUMMARY')">
+<span class="material-symbols-outlined text-[16px]">ios_share</span> Export Summary
+                    </button>
+</div>
+</div>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- State Distribution (Bento-style widget) -->
+<div class="lg:col-span-4 bg-surface-container-lowest border border-outline-variant rounded p-4 flex flex-col">
+<h2 class="font-label-md text-label-md text-on-surface uppercase mb-4 tracking-wider">State Distribution</h2>
+<div class="flex-1 flex flex-col justify-center gap-4">
+<!-- Simulated Bar representation -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-[#10b981]"></span> OK</span>
+<span class="tabular-nums">92%</span>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-sm overflow-hidden">
+<div class="bg-[#10b981] h-full" style="width: 92%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-[#f59e0b]"></span> Warn</span>
+<span class="tabular-nums font-bold text-[#b45309]">5%</span>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-sm overflow-hidden">
+<div class="bg-[#f59e0b] h-full" style="width: 5%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-[#e11d48]"></span> Down</span>
+<span class="tabular-nums">3%</span>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-sm overflow-hidden">
+<div class="bg-[#e11d48] h-full" style="width: 3%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity List -->
+<div class="lg:col-span-8 bg-surface-container-lowest border border-outline-variant rounded overflow-hidden flex flex-col">
+<div class="p-4 border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+<h2 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Recent Activity</h2>
+<button class="text-secondary hover:text-primary font-label-sm text-label-sm">View All</button>
+</div>
+<div class="flex-1 overflow-y-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface border-b border-outline-variant font-label-sm text-label-sm text-on-surface-variant uppercase">
+<th class="py-2 px-4 font-medium">Timestamp</th>
+<th class="py-2 px-4 font-medium">Service</th>
+<th class="py-2 px-4 font-medium">Event</th>
+<th class="py-2 px-4 font-medium text-right">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<tr class="border-b border-outline-variant hover:bg-surface-variant transition-colors group cursor-default">
+<td class="py-2 px-4 tabular-nums text-on-surface-variant">10:42:01 UTC</td>
+<td class="py-2 px-4 font-label-sm text-label-sm font-medium">api-gateway-eu</td>
+<td class="py-2 px-4">Latency spike detected &gt; 500ms</td>
+<td class="py-2 px-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-sm bg-[#fef3c7] text-[#b45309] font-label-sm text-label-sm">WARN</span>
+</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-variant transition-colors group cursor-default">
+<td class="py-2 px-4 tabular-nums text-on-surface-variant">10:38:15 UTC</td>
+<td class="py-2 px-4 font-label-sm text-label-sm font-medium">auth-service-us</td>
+<td class="py-2 px-4">Container restarted successfully</td>
+<td class="py-2 px-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-sm bg-[#d1fae5] text-[#047857] font-label-sm text-label-sm">OK</span>
+</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-variant transition-colors group cursor-default">
+<td class="py-2 px-4 tabular-nums text-on-surface-variant">10:25:00 UTC</td>
+<td class="py-2 px-4 font-label-sm text-label-sm font-medium">db-cluster-main</td>
+<td class="py-2 px-4 text-error font-medium">Connection timeout (Node 3)</td>
+<td class="py-2 px-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-sm bg-[#ffe4e6] text-[#e11d48] font-label-sm text-label-sm">DOWN</span>
+</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-variant transition-colors group cursor-default">
+<td class="py-2 px-4 tabular-nums text-on-surface-variant">10:15:22 UTC</td>
+<td class="py-2 px-4 font-label-sm text-label-sm font-medium">payment-worker</td>
+<td class="py-2 px-4">Queue length exceeded threshold</td>
+<td class="py-2 px-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 rounded-sm bg-[#fef3c7] text-[#b45309] font-label-sm text-label-sm">WARN</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Health Grid Overview (Monoliths) -->
+<div class="lg:col-span-12 bg-surface-container-lowest border border-outline-variant rounded p-4">
+<h2 class="font-label-md text-label-md text-on-surface uppercase mb-4 tracking-wider">Cluster Health Matrix</h2>
+<div class="flex flex-wrap gap-1">
+<!-- Generating a grid of 24x24 status blocks -->
+<script>
+                             const statuses = ['bg-[#10b981]', 'bg-[#10b981]', 'bg-[#10b981]', 'bg-[#10b981]', 'bg-[#10b981]', 'bg-[#10b981]', 'bg-[#f59e0b]', 'bg-[#10b981]', 'bg-[#10b981]', 'bg-[#e11d48]'];
+                             for(let i=0; i<60; i++) {
+                                 let statusClass = statuses[Math.floor(Math.random() * statuses.length)];
+                                 document.write(`<div class="w-6 h-6 rounded-sm ${statusClass} hover:opacity-80 cursor-pointer" title="Node ${i}"></div>`);
+                             }
+                         </script>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,1981 @@
+{
+  "generatedAt": "2026-06-21T03:53:58.641Z",
+  "screenCount": 3,
+  "screens": {
+    "09e9c3cca255481197a5bc5c2c5285d7": {
+      "screenId": "09e9c3cca255481197a5bc5c2c5285d7",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "z-40",
+            "bg-surface-container-low",
+            "dark:bg-surface-container-lowest"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "flex",
+            "justify-between",
+            "items-center",
+            "w-full",
+            "px-container-padding",
+            "h-10",
+            "bg-surface",
+            "dark:bg-surface-dim",
+            "border-b",
+            "border-outline-variant"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "overflow-auto",
+            "p-container-padding",
+            "flex",
+            "flex-col",
+            "gap-stack-md"
+          ],
+          "childCount": 48
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Reset App State",
+          "classes": [
+            "w-full",
+            "text-center",
+            "py-2",
+            "px-4",
+            "border",
+            "border-outline",
+            "text-on-surface",
+            "font-label-md",
+            "text-label-md",
+            "rounded-DEFAULT",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "refresh",
+          "classes": [
+            "text-primary",
+            "hover:bg-surface-container-high",
+            "p-1",
+            "rounded-DEFAULT",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "classes": [
+            "text-primary",
+            "hover:bg-surface-container-high",
+            "p-1",
+            "rounded-DEFAULT",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "classes": [
+            "h-8",
+            "px-3",
+            "border",
+            "border-outline-variant",
+            "bg-surface-container-lowest",
+            "text-on-surface",
+            "font-label-md",
+            "text-label-md",
+            "rounded-DEFAULT",
+            "flex",
+            "items-center",
+            "gap-2",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": "sync",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "classes": [
+            "h-8",
+            "px-4",
+            "bg-primary",
+            "text-on-primary",
+            "font-label-md",
+            "text-label-md",
+            "rounded-DEFAULT",
+            "hover:opacity-90",
+            "transition-opacity"
+          ],
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_left",
+          "classes": [
+            "p-1",
+            "hover:bg-surface-variant",
+            "rounded-DEFAULT",
+            "disabled:opacity-50"
+          ],
+          "icon": "chevron_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_right",
+          "classes": [
+            "p-1",
+            "hover:bg-surface-variant",
+            "rounded-DEFAULT"
+          ],
+          "icon": "chevron_right",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "classes": [
+            "p-1",
+            "hover:bg-surface-variant",
+            "rounded-DEFAULT",
+            "text-on-surface-variant"
+          ],
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View Details",
+          "classes": [
+            "flex-1",
+            "h-8",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-label-md",
+            "text-label-md",
+            "rounded-DEFAULT",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Edit Config",
+          "classes": [
+            "flex-1",
+            "h-8",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-label-md",
+            "text-label-md",
+            "rounded-DEFAULT",
+            "hover:bg-surface-variant",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Signal Desk V2.4.1 Canary",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search records...",
+          "placeholder": "Search records...",
+          "name": "ACT_SEARCH_RECORDS",
+          "classes": [
+            "h-6",
+            "pl-7",
+            "pr-2",
+            "py-0",
+            "w-48",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "focus:border-primary",
+            "focus:ring-0",
+            "font-body-sm",
+            "text-body-sm",
+            "text-on-surface",
+            "placeholder:text-outline-variant",
+            "outline-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Services",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "dns",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "notification_important",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "receipt_long",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Export Data",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "export_notes",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "href": "#",
+          "classes": [
+            "font-label-md",
+            "text-label-md"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "text-primary",
+            "dark:text-primary-fixed",
+            "font-bold",
+            "border-b-2",
+            "border-primary",
+            "dark:border-primary-fixed",
+            "pb-1",
+            "h-full",
+            "flex",
+            "items-end",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-highest",
+            "transition-colors",
+            "font-headline-md",
+            "text-headline-md",
+            "px-2"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "text-secondary",
+            "dark:text-secondary-fixed-dim",
+            "pb-[6px]",
+            "h-full",
+            "flex",
+            "items-end",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-highest",
+            "transition-colors",
+            "font-headline-md",
+            "text-headline-md",
+            "px-2"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "text-secondary",
+            "dark:text-secondary-fixed-dim",
+            "pb-[6px]",
+            "h-full",
+            "flex",
+            "items-end",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-highest",
+            "transition-colors",
+            "font-headline-md",
+            "text-headline-md",
+            "px-2"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "dashboard",
+        "dns",
+        "notification_important",
+        "settings",
+        "receipt_long",
+        "export_notes",
+        "help_outline",
+        "search",
+        "refresh",
+        "download",
+        "sync",
+        "chevron_left",
+        "chevron_right",
+        "more_vert"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "tertiary-fixed-dim": "#dec29a",
+        "on-secondary-fixed-variant": "#38485d",
+        "tertiary-container": "#271901",
+        "surface-variant": "#e0e3e5",
+        "error": "#ba1a1a",
+        "on-surface-variant": "#45464d",
+        "surface-container-lowest": "#ffffff",
+        "surface-dim": "#d8dadc",
+        "on-tertiary-container": "#98805d",
+        "on-primary-fixed-variant": "#3f465c",
+        "on-tertiary": "#ffffff",
+        "on-secondary-container": "#54647a",
+        "on-primary-fixed": "#131b2e",
+        "surface-tint": "#565e74",
+        "on-surface": "#191c1e",
+        "surface-container-highest": "#e0e3e5",
+        "on-tertiary-fixed": "#271901",
+        "secondary": "#505f76",
+        "inverse-primary": "#bec6e0",
+        "secondary-fixed": "#d3e4fe",
+        "surface-container-low": "#f2f4f6",
+        "primary-fixed-dim": "#bec6e0",
+        "inverse-on-surface": "#eff1f3",
+        "primary": "#000000",
+        "surface-container-high": "#e6e8ea",
+        "surface-bright": "#f7f9fb",
+        "error-container": "#ffdad6",
+        "inverse-surface": "#2d3133",
+        "on-error": "#ffffff",
+        "primary-container": "#131b2e",
+        "on-background": "#191c1e",
+        "secondary-fixed-dim": "#b7c8e1",
+        "surface-container": "#eceef0",
+        "on-error-container": "#93000a",
+        "tertiary": "#000000",
+        "outline-variant": "#c6c6cd",
+        "on-primary-container": "#7c839b",
+        "tertiary-fixed": "#fcdeb5",
+        "on-primary": "#ffffff",
+        "outline": "#76777d",
+        "background": "#f7f9fb",
+        "primary-fixed": "#dae2fd",
+        "on-secondary-fixed": "#0b1c30",
+        "surface": "#f7f9fb",
+        "secondary-container": "#d0e1fb",
+        "on-tertiary-fixed-variant": "#574425",
+        "on-secondary": "#ffffff"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "1"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Services",
+          "icon": "dns",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "notification_important",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "receipt_long",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Export Data",
+          "icon": "export_notes",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Reset App State",
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "refresh",
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Retry Load",
+          "icon": "sync",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Create Record",
+          "icon": null,
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_left",
+          "icon": "chevron_left",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "chevron_right",
+          "icon": "chevron_right",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "more_vert",
+          "icon": "more_vert",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View Details",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Edit Config",
+          "icon": null,
+          "action": "edit",
+          "expectedBehavior": "open edit flow or update selected item/state"
+        },
+        {
+          "kind": "button",
+          "label": "Signal Desk V2.4.1 Canary",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search records...",
+          "type": "text",
+          "placeholder": "Search records...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "Signal Desk V2.4.1 Canary",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Services",
+          "icon": "dns",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "notification_important",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "receipt_long",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Reset App State",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Export Data",
+          "icon": "export_notes",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "icon": "help_outline",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Record Operations - Signal Desk Canary"
+    },
+    "774bca21ee174467aa90a24ca76a2865": {
+      "screenId": "774bca21ee174467aa90a24ca76a2865",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "aside",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface-container-low",
+            "dark:bg-surface-container-lowest",
+            "text-on-surface",
+            "dark:text-on-surface-variant",
+            "font-label-md",
+            "text-label-md",
+            "border-r",
+            "border-outline-variant",
+            "dark:border-outline",
+            "flex"
+          ],
+          "childCount": 5
+        },
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "bg-surface",
+            "dark:bg-surface-dim",
+            "font-headline-md",
+            "text-headline-md",
+            "border-b",
+            "border-outline-variant",
+            "dark:border-outline",
+            "flex",
+            "justify-between",
+            "items-center"
+          ],
+          "childCount": 4
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "overflow-y-auto",
+            "p-container-padding",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-start",
+            "py-8"
+          ],
+          "childCount": 9
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Export Data",
+          "classes": [
+            "w-full",
+            "text-left",
+            "text-on-surface-variant",
+            "dark:text-surface-variant",
+            "px-3",
+            "py-2",
+            "flex",
+            "items-center",
+            "gap-2",
+            "hover:bg-surface-variant",
+            "dark:hover:bg-on-surface-variant",
+            "transition-all",
+            "rounded-lg"
+          ],
+          "icon": "export_notes",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Help",
+          "classes": [
+            "w-full",
+            "text-left",
+            "text-on-surface-variant",
+            "dark:text-surface-variant",
+            "px-3",
+            "py-2",
+            "flex",
+            "items-center",
+            "gap-2",
+            "hover:bg-surface-variant",
+            "dark:hover:bg-on-surface-variant",
+            "transition-all",
+            "rounded-lg"
+          ],
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset App State",
+          "classes": [
+            "text-error",
+            "font-label-md",
+            "text-[11px]",
+            "uppercase",
+            "tracking-wider",
+            "font-semibold",
+            "hover:opacity-80",
+            "transition-opacity",
+            "flex",
+            "items-center",
+            "gap-1"
+          ],
+          "icon": "refresh",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "refresh",
+          "classes": [
+            "text-on-surface",
+            "hover:bg-surface-container-high",
+            "p-1",
+            "rounded-DEFAULT",
+            "transition-colors"
+          ],
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "classes": [
+            "text-on-surface",
+            "hover:bg-surface-container-high",
+            "p-1",
+            "rounded-DEFAULT",
+            "transition-colors"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "classes": [
+            "px-4",
+            "py-2",
+            "bg-surface-container-lowest",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-label-md",
+            "text-label-md",
+            "rounded-DEFAULT",
+            "hover:bg-surface-container-low",
+            "transition-colors"
+          ],
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Save Record",
+          "classes": [
+            "px-4",
+            "py-2",
+            "bg-primary",
+            "text-on-primary",
+            "font-label-md",
+            "text-label-md",
+            "rounded-DEFAULT",
+            "hover:opacity-90",
+            "transition-opacity"
+          ],
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search...",
+          "placeholder": "Search...",
+          "name": "",
+          "classes": [
+            "bg-surface-container-low",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "pl-8",
+            "pr-3",
+            "py-1",
+            "text-sm",
+            "focus:outline-none",
+            "focus:border-primary",
+            "w-48",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "record-name",
+          "placeholder": "",
+          "name": "record-name",
+          "classes": [
+            "w-full",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "px-3",
+            "py-2",
+            "font-body-sm",
+            "text-body-sm",
+            "focus:outline-none",
+            "focus:border-primary",
+            "transition-colors",
+            "text-on-surface",
+            "placeholder:text-outline"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "textarea",
+          "label": "record-description",
+          "placeholder": "",
+          "name": "record-description",
+          "classes": [
+            "w-full",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "px-3",
+            "py-2",
+            "font-body-sm",
+            "text-body-sm",
+            "focus:outline-none",
+            "focus:border-primary",
+            "transition-colors",
+            "text-on-surface",
+            "resize-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "select",
+          "label": "initial-status",
+          "placeholder": "",
+          "name": "initial-status",
+          "classes": [
+            "w-full",
+            "appearance-none",
+            "bg-surface",
+            "border",
+            "border-outline-variant",
+            "rounded-DEFAULT",
+            "px-3",
+            "py-2",
+            "font-body-sm",
+            "text-body-sm",
+            "focus:outline-none",
+            "focus:border-primary",
+            "transition-colors",
+            "text-on-surface"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Services",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "dns",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "notification_important",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined"
+          ],
+          "icon": "receipt_long",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "text-secondary",
+            "dark:text-secondary-fixed-dim",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-highest",
+            "transition-colors",
+            "h-10",
+            "flex",
+            "items-center",
+            "px-2",
+            "text-sm"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "text-primary",
+            "dark:text-primary-fixed",
+            "font-bold",
+            "border-b-2",
+            "border-primary",
+            "dark:border-primary-fixed",
+            "pb-1",
+            "h-10",
+            "flex",
+            "items-center",
+            "px-2",
+            "text-sm"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "text-secondary",
+            "dark:text-secondary-fixed-dim",
+            "hover:bg-surface-container-high",
+            "dark:hover:bg-surface-container-highest",
+            "transition-colors",
+            "h-10",
+            "flex",
+            "items-center",
+            "px-2",
+            "text-sm"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "rocket_launch",
+        "dashboard",
+        "dns",
+        "notification_important",
+        "settings",
+        "receipt_long",
+        "export_notes",
+        "help_outline",
+        "refresh",
+        "search",
+        "download",
+        "warning",
+        "arrow_drop_down"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "tertiary-fixed-dim": "#dec29a",
+        "on-secondary-fixed-variant": "#38485d",
+        "tertiary-container": "#271901",
+        "surface-variant": "#e0e3e5",
+        "error": "#ba1a1a",
+        "on-surface-variant": "#45464d",
+        "surface-container-lowest": "#ffffff",
+        "surface-dim": "#d8dadc",
+        "on-tertiary-container": "#98805d",
+        "on-primary-fixed-variant": "#3f465c",
+        "on-tertiary": "#ffffff",
+        "on-secondary-container": "#54647a",
+        "on-primary-fixed": "#131b2e",
+        "surface-tint": "#565e74",
+        "on-surface": "#191c1e",
+        "surface-container-highest": "#e0e3e5",
+        "on-tertiary-fixed": "#271901",
+        "secondary": "#505f76",
+        "inverse-primary": "#bec6e0",
+        "secondary-fixed": "#d3e4fe",
+        "surface-container-low": "#f2f4f6",
+        "primary-fixed-dim": "#bec6e0",
+        "inverse-on-surface": "#eff1f3",
+        "primary": "#000000",
+        "surface-container-high": "#e6e8ea",
+        "surface-bright": "#f7f9fb",
+        "error-container": "#ffdad6",
+        "inverse-surface": "#2d3133",
+        "on-error": "#ffffff",
+        "primary-container": "#131b2e",
+        "on-background": "#191c1e",
+        "secondary-fixed-dim": "#b7c8e1",
+        "surface-container": "#eceef0",
+        "on-error-container": "#93000a",
+        "tertiary": "#000000",
+        "outline-variant": "#c6c6cd",
+        "on-primary-container": "#7c839b",
+        "tertiary-fixed": "#fcdeb5",
+        "on-primary": "#ffffff",
+        "outline": "#76777d",
+        "background": "#f7f9fb",
+        "primary-fixed": "#dae2fd",
+        "on-secondary-fixed": "#0b1c30",
+        "surface": "#f7f9fb",
+        "secondary-container": "#d0e1fb",
+        "on-tertiary-fixed-variant": "#574425",
+        "on-secondary": "#ffffff"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Services",
+          "icon": "dns",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "notification_important",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "receipt_long",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Export Data",
+          "icon": "export_notes",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Help",
+          "icon": "help_outline",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset App State",
+          "icon": "refresh",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "refresh",
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Save Record",
+          "icon": null,
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "input",
+          "label": "Search...",
+          "type": "text",
+          "placeholder": "Search...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "record-name",
+          "type": "text",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "record-description",
+          "type": "textarea",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "initial-status",
+          "type": "select",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Services",
+          "icon": "dns",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "notification_important",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "receipt_long",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "active": false
+        }
+      ],
+      "title": "Record Editor - Signal Desk Canary"
+    },
+    "8880ad8fb79141c39c7d7e9cd371360d": {
+      "screenId": "8880ad8fb79141c39c7d7e9cd371360d",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "md:hidden",
+            "flex",
+            "justify-between",
+            "items-center",
+            "w-full",
+            "px-container-padding",
+            "h-10",
+            "bg-surface",
+            "border-b",
+            "border-outline-variant"
+          ],
+          "childCount": 2
+        },
+        {
+          "tag": "aside",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "fixed",
+            "left-0",
+            "top-0",
+            "h-full",
+            "z-40",
+            "bg-surface-container-low",
+            "border-r"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "md:ml-60",
+            "flex",
+            "flex-col",
+            "min-h-screen"
+          ],
+          "childCount": 31
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "refresh",
+          "classes": [
+            "text-secondary",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "p-1",
+            "rounded"
+          ],
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "classes": [
+            "text-secondary",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "p-1",
+            "rounded"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset App State",
+          "classes": [
+            "w-full",
+            "py-2",
+            "bg-surface-variant",
+            "text-on-surface-variant",
+            "font-label-md",
+            "text-label-md",
+            "rounded",
+            "hover:bg-outline-variant",
+            "transition-colors",
+            "border",
+            "border-outline-variant",
+            "text-left",
+            "px-3",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-3",
+            "py-1.5",
+            "bg-surface",
+            "text-on-surface",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "hover:bg-surface-variant",
+            "transition-colors",
+            "font-label-sm",
+            "text-label-sm",
+            "h-8"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export Summary",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-3",
+            "py-1.5",
+            "bg-primary",
+            "text-on-primary",
+            "rounded",
+            "hover:opacity-90",
+            "transition-opacity",
+            "font-label-sm",
+            "text-label-sm",
+            "h-8"
+          ],
+          "icon": "ios_share",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View All",
+          "classes": [
+            "text-secondary",
+            "hover:text-primary",
+            "font-label-sm",
+            "text-label-sm"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "dashboard",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Services",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "dns",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "notification_important",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "receipt_long",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Export Data",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "export_notes",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "href": "#",
+          "classes": [
+            "material-symbols-outlined",
+            "text-[18px]"
+          ],
+          "icon": "help_outline",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "href": "#",
+          "classes": [
+            "text-secondary",
+            "font-headline-md",
+            "text-headline-md",
+            "flex",
+            "items-center",
+            "h-full",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "px-2"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "href": "#",
+          "classes": [
+            "text-secondary",
+            "font-headline-md",
+            "text-headline-md",
+            "flex",
+            "items-center",
+            "h-full",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "px-2"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "href": "#",
+          "classes": [
+            "text-primary",
+            "font-bold",
+            "border-b-2",
+            "border-primary",
+            "pb-1",
+            "font-headline-md",
+            "text-headline-md",
+            "flex",
+            "items-center",
+            "h-full",
+            "opacity-80",
+            "duration-100",
+            "px-2"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "refresh",
+        "download",
+        "dashboard",
+        "dns",
+        "notification_important",
+        "settings",
+        "receipt_long",
+        "restart_alt",
+        "export_notes",
+        "help_outline",
+        "filter_list",
+        "ios_share"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "tertiary-fixed-dim": "#dec29a",
+        "on-secondary-fixed-variant": "#38485d",
+        "tertiary-container": "#271901",
+        "surface-variant": "#e0e3e5",
+        "error": "#ba1a1a",
+        "on-surface-variant": "#45464d",
+        "surface-container-lowest": "#ffffff",
+        "surface-dim": "#d8dadc",
+        "on-tertiary-container": "#98805d",
+        "on-primary-fixed-variant": "#3f465c",
+        "on-tertiary": "#ffffff",
+        "on-secondary-container": "#54647a",
+        "on-primary-fixed": "#131b2e",
+        "surface-tint": "#565e74",
+        "on-surface": "#191c1e",
+        "surface-container-highest": "#e0e3e5",
+        "on-tertiary-fixed": "#271901",
+        "secondary": "#505f76",
+        "inverse-primary": "#bec6e0",
+        "secondary-fixed": "#d3e4fe",
+        "surface-container-low": "#f2f4f6",
+        "primary-fixed-dim": "#bec6e0",
+        "inverse-on-surface": "#eff1f3",
+        "primary": "#000000",
+        "surface-container-high": "#e6e8ea",
+        "surface-bright": "#f7f9fb",
+        "error-container": "#ffdad6",
+        "inverse-surface": "#2d3133",
+        "on-error": "#ffffff",
+        "primary-container": "#131b2e",
+        "on-background": "#191c1e",
+        "secondary-fixed-dim": "#b7c8e1",
+        "surface-container": "#eceef0",
+        "on-error-container": "#93000a",
+        "tertiary": "#000000",
+        "outline-variant": "#c6c6cd",
+        "on-primary-container": "#7c839b",
+        "tertiary-fixed": "#fcdeb5",
+        "on-primary": "#ffffff",
+        "outline": "#76777d",
+        "background": "#f7f9fb",
+        "primary-fixed": "#dae2fd",
+        "on-secondary-fixed": "#0b1c30",
+        "surface": "#f7f9fb",
+        "secondary-container": "#d0e1fb",
+        "on-tertiary-fixed-variant": "#574425",
+        "on-secondary": "#ffffff"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Services",
+          "icon": "dns",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "notification_important",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "receipt_long",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Export Data",
+          "icon": "export_notes",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Help",
+          "icon": "help_outline",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "refresh",
+          "icon": "refresh",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Reset App State",
+          "icon": "restart_alt",
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export Summary",
+          "icon": "ios_share",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "View All",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "link",
+          "label": "dashboard",
+          "icon": "dashboard",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Services",
+          "icon": "dns",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Alerts",
+          "icon": "notification_important",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "settings",
+          "icon": "settings",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": "receipt_long",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Operations",
+          "icon": null,
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Editor",
+          "icon": null,
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Insights",
+          "icon": null,
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Insights - Signal Desk Canary"
+    }
+  }
+}

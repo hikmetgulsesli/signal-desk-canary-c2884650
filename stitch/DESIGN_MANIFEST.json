@@ -1,0 +1,35 @@
+[
+  {
+    "screenId": "774bca21ee174467aa90a24ca76a2865",
+    "title": "Record Editor - Signal Desk Canary",
+    "htmlFile": "774bca21ee174467aa90a24ca76a2865.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2I5YjMzNTFlOTI5MzRlN2Q4OGQ1ZDJmOGI4ODE4MTIxEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhMyNzAwOTcyODM5NjkwNDg5ODc5&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/signal-desk-canary-c2884650/stitch/774bca21ee174467aa90a24ca76a2865.html",
+    "surfaceIds": [
+      "SURF_RECORD_EDITOR"
+    ]
+  },
+  {
+    "screenId": "8880ad8fb79141c39c7d7e9cd371360d",
+    "title": "Insights - Signal Desk Canary",
+    "htmlFile": "8880ad8fb79141c39c7d7e9cd371360d.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2ZiYjYyZjNiMGI2MDQ0MDdhMTNjZTNhNmQzYWM2YmQ5EgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhMyNzAwOTcyODM5NjkwNDg5ODc5&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/signal-desk-canary-c2884650/stitch/8880ad8fb79141c39c7d7e9cd371360d.html",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  },
+  {
+    "screenId": "09e9c3cca255481197a5bc5c2c5285d7",
+    "title": "Record Operations - Signal Desk Canary",
+    "htmlFile": "09e9c3cca255481197a5bc5c2c5285d7.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzdlNWVkNTE4YjQ3YzQ1MjU5ZWU1YjJiOGM4ZTVlMGYzEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhMyNzAwOTcyODM5NjkwNDg5ODc5&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/signal-desk-canary-c2884650/stitch/09e9c3cca255481197a5bc5c2c5285d7.html",
+    "surfaceIds": [
+      "SURF_RECORD_OPERATIONS"
+    ]
+  }
+]

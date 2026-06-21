@@ -1,0 +1,29 @@
+[
+  {
+    "screenId": "774bca21ee174467aa90a24ca76a2865",
+    "name": "Record Editor - Signal Desk Canary",
+    "type": "form",
+    "description": "Record Editor - Signal Desk Canary screen",
+    "surfaceIds": [
+      "SURF_RECORD_EDITOR"
+    ]
+  },
+  {
+    "screenId": "8880ad8fb79141c39c7d7e9cd371360d",
+    "name": "Insights - Signal Desk Canary",
+    "type": "app-screen",
+    "description": "Insights - Signal Desk Canary screen",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  },
+  {
+    "screenId": "09e9c3cca255481197a5bc5c2c5285d7",
+    "name": "Record Operations - Signal Desk Canary",
+    "type": "app-screen",
+    "description": "Record Operations - Signal Desk Canary screen",
+    "surfaceIds": [
+      "SURF_RECORD_OPERATIONS"
+    ]
+  }
+]
