@@ -7,13 +7,85 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <main data-setfarm-root="baseline" data-testid="setfarm-app-root" class="app-shell">
-      <section class="hero">
-        <p class="eyebrow">Setfarm Static HTML</p>
-        <h1>Signal Desk Canary</h1>
-        <p class="summary">Baseline static page ready for plain HTML, CSS, and JavaScript implementation.</p>
-      </section>
-    </main>
+    <div class="app-shell" data-setfarm-root="baseline" data-testid="setfarm-app-root">
+      <header class="app-header">
+        <div class="brand">Signal Desk Canary</div>
+        <div class="global-actions">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search..."
+            aria-label="Search"
+            data-action-id="global-search"
+            oninput="app.handleSearch(this.value)"
+          />
+          <button type="button" data-action-id="export-data" onclick="app.exportData()">Export Data</button>
+          <button type="button" data-action-id="help" onclick="app.showHelp()">Help</button>
+          <button type="button" data-action-id="reset-app-state" onclick="app.reset()">Reset App State</button>
+        </div>
+      </header>
+      <div class="app-body">
+        <aside class="app-sidebar">
+          <nav class="main-nav">
+            <button type="button" data-nav="dashboard" onclick="app.navigate('dashboard')">Dashboard</button>
+            <button type="button" data-nav="operations" onclick="app.navigate('operations')">Operations</button>
+            <button type="button" data-nav="editor" onclick="app.navigate('editor')">Editor</button>
+            <button type="button" data-nav="insights" onclick="app.navigate('insights')">Insights</button>
+          </nav>
+        </aside>
+        <main class="app-content" id="app-content">
+          <!-- Content rendered by app.js -->
+        </main>
+      </div>
+    </div>
+
+    <script src="assets/js/signal-desk-canary.state.js"></script>
+    <script src="assets/js/signal-desk-canary.storage.js"></script>
+    <script id="seed-data" type="application/json">
+{
+  "signals": [
+    {
+      "id": "sig-001",
+      "name": "API Gateway",
+      "status": "ok",
+      "description": "Primary API gateway health"
+    },
+    {
+      "id": "sig-002",
+      "name": "Auth Service",
+      "status": "warn",
+      "description": "Authentication latency elevated"
+    },
+    {
+      "id": "sig-003",
+      "name": "Database Replica",
+      "status": "down",
+      "description": "Replica sync lag critical"
+    }
+  ],
+  "activities": [
+    {
+      "id": "evt-001",
+      "message": "API Gateway status OK",
+      "timestamp": "2026-06-21T04:00:00Z"
+    },
+    {
+      "id": "evt-002",
+      "message": "Auth Service warning triggered",
+      "timestamp": "2026-06-21T04:05:00Z"
+    },
+    {
+      "id": "evt-003",
+      "message": "Database Replica down",
+      "timestamp": "2026-06-21T04:10:00Z"
+    }
+  ],
+  "preferences": {
+    "theme": "light",
+    "refreshInterval": 30
+  }
+}
+    </script>
     <script src="assets/js/app.js" defer></script>
     <script src="assets/js/test-bridge.js" defer></script>
   </body>
